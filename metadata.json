@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Catálogo de Productos subli\u0027 party",
+  "description": "Una landing page de un catálogo de productos personalizado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
