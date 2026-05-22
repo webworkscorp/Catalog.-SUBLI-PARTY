@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Google AI Studio App</title>
+    <script>
+      // Prevent "Cannot set property fetch of #<Window> which has only a getter"
+      // by providing a dummy setter.
+      try {
+        let currentFetch = window.fetch;
+        Object.defineProperty(window, 'fetch', {
+          configurable: true,
+          enumerable: true,
+          get: () => currentFetch,
+          set: (newFetch) => { currentFetch = newFetch; }
+        });
+      } catch(e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
