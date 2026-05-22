@@ -97,28 +97,13 @@ export default function App() {
           {/* Separador de sección */}
           <div className="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-[0] z-0">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-[30px] md:h-[50px]">
-              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#3963a7"></path>
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#FFF5F7"></path>
             </svg>
-          </div>
-        </section>
-
-        <section className="bg-[#3963a7] pt-20 pb-16 md:pt-32 md:pb-24 px-6 flex justify-center relative z-10">
-          <div className="w-full md:w-[85%] max-w-[750px] aspect-video relative rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.6)] group cursor-pointer overflow-hidden">
-            <MarcadorImagen texto="[Video]" className="w-full h-full border-none bg-[#2e5aa5] text-blue-200" />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
-              <Play className="text-white w-12 h-12" fill="white" />
-            </div>
           </div>
         </section>
 
         {/* Sección de Productos actualizada con diseño Premium */}
         <section className="bg-gradient-to-b from-[#FFF5F7] to-[#F3E8F5] pt-24 pb-0 px-6 md:px-16 relative">
-          {/* Wave Distorcionada / Separador */}
-          <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-[40px] md:h-[60px]">
-              <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" className="fill-[#3963a7]"></path>
-            </svg>
-          </div>
 
           <div className="max-w-[900px] mx-auto text-center relative z-10">
             
@@ -394,7 +379,7 @@ export default function App() {
         </section>
 
         {/* Cuarta Sección de Productos (Amarillo Pastel) */}
-        <section className="bg-gradient-to-b from-[#FFFDF0] to-[#FFF9D0] pt-24 pb-20 px-6 md:px-16 relative">
+        <section className="bg-gradient-to-b from-[#FFFDF0] to-[#FFF9D0] pt-24 pb-2 px-6 md:px-16 relative">
           {/* Wave Distorcionada / Separador */}
           <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-[40px] md:h-[60px]">
@@ -407,7 +392,7 @@ export default function App() {
               {[
                 { 
                   id: 10, 
-                  image: "https://i.imgur.com/UIfqaiV.jpeg",
+                  image: "https://i.imgur.com/iZ3Ou3W.jpeg",
                   title: "Banderín (Letra)",
                   price: "₡1,000",
                   minOrder: "5 piezas",
@@ -416,21 +401,30 @@ export default function App() {
                 },
                 { 
                   id: 11, 
-                  image: "",
-                  title: "",
-                  price: "",
-                  minOrder: "",
-                  description: "",
-                  size: ""
+                  image: "https://i.imgur.com/pimv9Ai.jpeg",
+                  title: "Chip Bags",
+                  price: "₡650",
+                  minOrder: "10 unidades",
+                  description: "Diseño personalizado de la tematica, incluye cinta doble cara para pegarlas. Para snack o dulces delgados, tipo Tosty de 25g. se entregan vacias.",
+                  size: "13,5 X 18 CM"
                 },
                 { 
                   id: 12, 
-                  image: "",
-                  title: "",
-                  price: "",
-                  minOrder: "",
-                  description: "",
-                  size: ""
+                  image: "https://i.imgur.com/XeYeFmW.jpeg",
+                  title: "Gorritos",
+                  price: "₡1,100",
+                  minOrder: "8 unidades",
+                  description: "Impresión en todo el gorrito, diseño personalizado. incluye cinta o liga elástica",
+                  size: "17 CM de alto Aprox."
+                },
+                { 
+                  id: 13, 
+                  image: "https://i.imgur.com/PqmHD3r.jpeg",
+                  title: "Mini libritos",
+                  price: "₡1,600",
+                  minOrder: "Paquete de 10 unidades",
+                  description: "Diseño personalizado en la portada, incluye 6 hojitas para colorear. (No incluye crayolas)",
+                  size: "12 X 8 CM"
                 }
               ].map((item) => (
                 <div key={item.id} className="flex flex-col items-center w-full">
@@ -472,6 +466,14 @@ export default function App() {
                   )}
                 </div>
               ))}
+            </div>
+            {/* Despedida de Sección 4 */}
+            <div className="-mt-16 md:-mt-28 flex justify-center w-full relative z-10 select-none pointer-events-none">
+              <img 
+                src="https://i.imgur.com/QjM4lNo.png" 
+                alt="Despedida Zootopia final" 
+                className="w-[280px] md:w-[400px] h-auto object-contain drop-shadow-2xl transition-transform duration-300 hover:scale-105 pointer-events-none select-none" 
+              />
             </div>
           </div>
         </section>
