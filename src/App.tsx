@@ -141,15 +141,26 @@ export default function App() {
                 }
               ].map((item) => (
                 <div key={item.id} className="flex flex-col items-center w-full">
-                  {/* Marco Arqueado Boutiques */}
-                  <div className="w-full bg-white rounded-t-[100px] rounded-b-3xl border border-[#F9C5D1] shadow-md flex items-center justify-center mb-6 overflow-hidden relative">
-                    {item.image ? (
-                      <img src={item.image} alt={item.title || `Producto ${item.id}`} className="w-full h-auto block select-none pointer-events-none" />
-                    ) : (
-                      <div className="h-80 flex items-center justify-center">
-                        <span className="text-[#F9C5D1] opacity-50">Producto {item.id}</span>
-                      </div>
+                  {/* Contenedor relativo para la tarjeta del Producto */}
+                  <div className="w-full relative mb-6">
+                    {/* Imagen adaptativa con posicionamiento específico para Producto 1 */}
+                    {item.id === 1 && (
+                      <img 
+                        src="https://i.imgur.com/7i6HtbT.png" 
+                        alt="Logo Caja Lonchera" 
+                        className="absolute left-1/2 -translate-x-1/2 bottom-[calc(100%-50px)] z-20 w-[45%] max-w-[180px] h-auto select-none pointer-events-none" 
+                      />
                     )}
+                    {/* Marco Arqueado Boutiques */}
+                    <div className="w-full bg-white rounded-t-[100px] rounded-b-3xl border border-[#F9C5D1] shadow-md flex items-center justify-center overflow-hidden relative">
+                      {item.image ? (
+                        <img src={item.image} alt={item.title || `Producto ${item.id}`} className="w-full h-auto block select-none pointer-events-none" />
+                      ) : (
+                        <div className="h-80 flex items-center justify-center">
+                          <span className="text-[#F9C5D1] opacity-50">Producto {item.id}</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                   
                   {/* Etiqueta Precio y Título */}
@@ -327,15 +338,26 @@ export default function App() {
                 }
               ].map((item) => (
                 <div key={item.id} className="flex flex-col items-center w-full">
-                  {/* Marco Arqueado Boutiques */}
-                  <div className={`w-full bg-white rounded-t-[100px] rounded-b-3xl border border-[#A8D3B8] shadow-md flex items-center justify-center mb-6 overflow-hidden relative ${item.id === 7 ? 'max-w-[280px] md:max-w-[310px]' : ''}`}>
-                    {item.image ? (
-                      <img src={item.image} alt={item.title || `Producto ${item.id}`} className="w-full h-auto block select-none pointer-events-none" />
-                    ) : (
-                      <div className="h-80 flex items-center justify-center">
-                        <span className="text-[#A8D3B8] opacity-50">Producto {item.id}</span>
-                      </div>
+                  {/* Contenedor relativo para la tarjeta del Producto */}
+                  <div className={`w-full relative mb-6 ${item.id === 7 ? 'max-w-[280px] md:max-w-[310px]' : ''}`}>
+                    {/* Imagen adaptativa con posicionamiento específico para Producto 7 */}
+                    {item.id === 7 && (
+                      <img 
+                        src="https://i.imgur.com/7i6HtbT.png" 
+                        alt="Logo Invitación Digital" 
+                        className="absolute left-1/2 -translate-x-1/2 bottom-[calc(100%-30px)] z-20 w-[45%] max-w-[180px] h-auto select-none pointer-events-none" 
+                      />
                     )}
+                    {/* Marco Arqueado Boutiques */}
+                    <div className="w-full bg-white rounded-t-[100px] rounded-b-3xl border border-[#A8D3B8] shadow-md flex items-center justify-center overflow-hidden relative">
+                      {item.image ? (
+                        <img src={item.image} alt={item.title || `Producto ${item.id}`} className="w-full h-auto block select-none pointer-events-none" />
+                      ) : (
+                        <div className="h-80 flex items-center justify-center">
+                          <span className="text-[#A8D3B8] opacity-50">Producto {item.id}</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                   
                   {/* Etiqueta Precio y Título */}
@@ -379,7 +401,7 @@ export default function App() {
         </section>
 
         {/* Cuarta Sección de Productos (Amarillo Pastel) */}
-        <section className="bg-gradient-to-b from-[#FFFDF0] to-[#FFF9D0] pt-24 pb-2 px-6 md:px-16 relative">
+        <section className="bg-gradient-to-b from-[#FFFDF0] to-[#FFF9D0] pt-24 pb-16 md:pb-24 px-6 md:px-16 relative">
           {/* Wave Distorcionada / Separador */}
           <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-[40px] md:h-[60px]">
@@ -425,18 +447,39 @@ export default function App() {
                   minOrder: "Paquete de 10 unidades",
                   description: "Diseño personalizado en la portada, incluye 6 hojitas para colorear. (No incluye crayolas)",
                   size: "12 X 8 CM"
+                },
+                { 
+                  id: 14, 
+                  image: "https://i.imgur.com/PvxUmEZ.jpeg",
+                  title: "Camisa blanca (Personalizada)",
+                  price: "₡7,500",
+                  minOrder: "1",
+                  description: "Camisa blanca personalizada con el nombre y temática del cumpleañero.",
+                  size: "S, M, L, XL, XXL",
+                  isTallas: true
                 }
               ].map((item) => (
                 <div key={item.id} className="flex flex-col items-center w-full">
-                  {/* Marco Arqueado Boutiques */}
-                  <div className="w-full bg-white rounded-t-[100px] rounded-b-3xl border border-[#F5DDA6] shadow-md flex items-center justify-center mb-6 overflow-hidden relative">
-                    {item.image ? (
-                      <img src={item.image} alt={item.title || `Producto ${item.id}`} className="w-full h-auto block select-none pointer-events-none" />
-                    ) : (
-                      <div className="h-80 flex items-center justify-center">
-                        <span className="text-[#F5DDA6] opacity-50">Producto {item.id}</span>
-                      </div>
+                  {/* Contenedor relativo para la tarjeta del Producto */}
+                  <div className="w-full relative mb-6">
+                    {/* Imagen adaptativa con posicionamiento específico para Producto 10 */}
+                    {item.id === 10 && (
+                      <img 
+                        src="https://i.imgur.com/qwOvkBT.png" 
+                        alt="Logo Banderín" 
+                        className="absolute left-1/2 -translate-x-1/2 bottom-[calc(100%-80px)] z-20 w-[45%] max-w-[180px] h-auto select-none pointer-events-none" 
+                      />
                     )}
+                    {/* Marco Arqueado Boutiques */}
+                    <div className="w-full bg-white rounded-t-[100px] rounded-b-3xl border border-[#F5DDA6] shadow-md flex items-center justify-center overflow-hidden relative">
+                      {item.image ? (
+                        <img src={item.image} alt={item.title || `Producto ${item.id}`} className="w-full h-auto block select-none pointer-events-none" />
+                      ) : (
+                        <div className="h-80 flex items-center justify-center">
+                          <span className="text-[#F5DDA6] opacity-50">Producto {item.id}</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                   
                   {/* Etiqueta Precio y Título */}
@@ -455,7 +498,7 @@ export default function App() {
                   {item.description ? (
                     <div className="w-full px-4 text-center mt-2 space-y-1 text-[#7B6F55] font-medium text-sm md:text-base">
                       <p><span className="font-bold">Pedido mínimo:</span> {item.minOrder}</p>
-                      <p><span className="font-bold">Tamaño:</span> {item.size}</p>
+                      <p><span className="font-bold">{item.isTallas ? 'Tallas' : 'Tamaño'}:</span> {item.size}</p>
                       <p className="mt-2 text-sm leading-relaxed">{item.description}</p>
                     </div>
                   ) : (
@@ -468,12 +511,15 @@ export default function App() {
               ))}
             </div>
             {/* Despedida de Sección 4 */}
-            <div className="-mt-16 md:-mt-28 flex justify-center w-full relative z-10 select-none pointer-events-none">
+            <div className="-mt-16 md:-mt-28 flex flex-col items-center justify-center w-full relative z-10 select-none">
               <img 
                 src="https://i.imgur.com/QjM4lNo.png" 
                 alt="Despedida Zootopia final" 
-                className="w-[280px] md:w-[400px] h-auto object-contain drop-shadow-2xl transition-transform duration-300 hover:scale-105 pointer-events-none select-none" 
+                className="w-[280px] md:w-[400px] h-auto object-contain drop-shadow-2xl transition-transform duration-300 hover:scale-110 pointer-events-none select-none" 
               />
+              <h2 className="text-2xl md:text-3xl font-black text-[#7B6F55] -mt-10 md:-mt-16 tracking-widest text-center uppercase font-sans select-none relative z-20">
+                ¡MUCHAS GRACIAS!
+              </h2>
             </div>
           </div>
         </section>
